@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f8f5ef" />
+  <title>Harvey & Hazel | Wedding Invitation</title>
+  <meta name="description" content="You are warmly invited to celebrate the wedding of Harvey and Hazel." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#fbf8f2;--ink:#343b32;--muted:#77786e;--sage:#7d8b76;--line:#dcd8cc;--white:#fffefa}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.6}
+    .page{max-width:760px;margin:auto;padding:22px}
+    .hero{min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;padding:44px 20px;border:1px solid var(--line);margin-top:12px;background:linear-gradient(180deg,rgba(251,248,242,.82),rgba(251,248,242,.96)),radial-gradient(ellipse at top,#e7e8dd 0,transparent 60%)}
+    .hero:before,.hero:after{content:"";position:absolute;width:76px;height:76px;border-color:#b9c0ad;border-style:solid;opacity:.8}
+    .hero:before{top:14px;left:14px;border-width:1px 0 0 1px}
+    .hero:after{right:14px;bottom:14px;border-width:0 1px 1px 0}
+    .eyebrow{letter-spacing:.24em;text-transform:uppercase;font-size:.68rem;color:var(--sage);font-weight:600}
+    h1,h2,.script{font-family:"Cormorant Garamond",serif;font-weight:500}
+    h1{font-size:clamp(3.5rem,12vw,6.6rem);line-height:.9;margin:22px 0 16px;letter-spacing:-.04em}
+    .amp{color:var(--sage);font-style:italic}
+    .hero p{color:var(--muted);max-width:400px;margin:12px auto}
+    .rule{width:66px;height:1px;background:var(--sage);margin:24px auto}
+    .date{font-size:.88rem;letter-spacing:.16em;text-transform:uppercase}
+    .section{padding:54px 12px;text-align:center}
+    h2{font-size:2.5rem;line-height:1.05;margin:10px 0 18px}
+    .section p{max-width:510px;margin:10px auto;color:#66685f}
+    .details{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}
+    .detail{border:1px solid var(--line);padding:22px 14px;background:rgba(255,254,250,.55)}
+    .detail h3{font-size:.7rem;text-transform:uppercase;letter-spacing:.18em;color:var(--sage);margin:0 0 8px}
+    .detail p{margin:0;color:var(--ink)}
+    .button{display:inline-block;background:var(--ink);color:white;text-decoration:none;padding:13px 22px;border:0;font:inherit;cursor:pointer;letter-spacing:.04em}
+    .button:hover{background:#4d5949}
+    .rsvp-card{background:var(--white);border:1px solid var(--line);padding:clamp(20px,5vw,36px);text-align:left;max-width:540px;margin:26px auto 0}
+    label{display:block;font-size:.83rem;font-weight:600;margin:15px 0 6px}
+    input,select,textarea{width:100%;padding:12px;border:1px solid #d3d0c5;background:#fffefa;color:var(--ink);font:inherit;border-radius:0}
+    input:focus,select:focus{outline:2px solid #b9c5b0;outline-offset:1px}
+    .small{font-size:.78rem;color:var(--muted)}
+    .status{margin-top:16px;padding:12px;background:#eef2e9;color:#3e563b;display:none;font-size:.9rem}
+    .status.error{background:#f7e9e5;color:#7b3024}
+    footer{text-align:center;padding:24px 0 36px;color:var(--muted);font-size:.8rem}
+    @media(max-width:520px){.page{padding:12px}.hero{min-height:80vh}.details{grid-template-columns:1fr}.section{padding:42px 8px}h2{font-size:2.15rem}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Together with our families</div>
+        <p class="script" style="font-size:1.45rem;margin-top:26px">With grateful hearts,</p>
+        <h1>Harvey <span class="amp">&</span><br>Hazel</h1>
+        <div class="rule"></div>
+        <p>invite you to share in the joy of our wedding celebration</p>
+        <div class="date" id="heroDate">April 8, 2026</div>
+        <p style="margin-top:28px"><a class="button" href="#rsvp">Kindly RSVP</a></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="eyebrow">A day to remember</div>
+      <h2>Our Wedding Day</h2>
+      <p>Your presence would mean so much to us as we begin this new chapter together. We hope you can celebrate this special day with us.</p>
+      <div class="details">
+        <div class="detail">
+          <h3>Date</h3>
+          <p>Wednesday<br><strong>April 8, 2026</strong></p>
+          <p class="small">Please verify the year before publishing.</p>
+        </div>
+        <div class="detail">
+          <h3>Ceremony & Celebration</h3>
+          <p><strong>Civil Ceremony</strong><br>Lola Feling Resto</p>
+          <p class="small">Please confirm the exact venue address and schedule.</p>
+        </div>
+      </div>
+      <p class="small">The ceremony time and complete venue address will be added once finalized.</p>
+    </section>
+
+    <section class="section" id="rsvp">
+      <div class="eyebrow">Kindly reply</div>
+      <h2>Will you join us?</h2>
+      <p>Please send your response so we can prepare for everyone comfortably.</p>
+      <form class="rsvp-card" id="rsvpForm">
+        <label for="guestName">Your full name *</label>
+        <input id="guestName" name="guestName" autocomplete="name" required maxlength="120" placeholder="Enter your full name">
+        <label for="attendance">Will you attend? *</label>
+        <select id="attendance" name="attendance" required>
+          <option value="">Please select</option>
+          <option value="Yes">Joyfully accepts</option>
+          <option value="No">Regretfully declines</option>
+        </select>
+        <label for="guestCount">Number attending (including you) *</label>
+        <select id="guestCount" name="guestCount" required>
+          <option value="">Choose guest count</option>
+          <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option>
+        </select>
+        <p class="small">If you cannot attend, the guest count will be saved as 0. Please only include guests invited with you.</p>
+        <label for="message">A short message (optional)</label>
+        <textarea id="message" name="message" rows="3" maxlength="500" placeholder="Write a note for the couple"></textarea>
+        <button class="button" type="submit" style="width:100%;margin-top:20px">Send RSVP</button>
+        <div class="status" id="status" role="status" aria-live="polite"></div>
+        <p class="small">Your response will be recorded for wedding planning only.</p>
+      </form>
+    </section>
+    <footer>With love and gratitude · Harvey & Hazel</footer>
+  </main>
+  <script>
+    // Paste your deployed Google Apps Script Web App URL here.
+    const RSVP_ENDPOINT = "https://script.google.com/macros/s/AKfycbzK8OaGrsayp8od8S8DRKpkdnl8VP2GGjn_bhGm-b9DEQxSNm-gj0_OdB69UjYhGq9N/exec";
+
+    const form = document.getElementById("rsvpForm");
+    const statusBox = document.getElementById("status");
+    const attendance = document.getElementById("attendance");
+    const guestCount = document.getElementById("guestCount");
+
+    attendance.addEventListener("change", () => {
+      if (attendance.value === "No") {
+        guestCount.value = "1";
+        guestCount.disabled = true;
+      } else {
+        guestCount.disabled = false;
+      }
+    });
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      statusBox.style.display = "block";
+      statusBox.className = "status";
+      if (RSVP_ENDPOINT.includes("PASTE_YOUR")) {
+        statusBox.className = "status error";
+        statusBox.textContent = "The RSVP form is not connected yet. The website owner must add the Google Apps Script URL.";
+        return;
+      }
+      const payload = {
+        guestName: document.getElementById("guestName").value.trim(),
+        attendance: attendance.value,
+        guestCount: attendance.value === "No" ? 0 : Number(guestCount.value),
+        message: document.getElementById("message").value.trim(),
+        submittedAt: new Date().toISOString()
+      };
+      try {
+        await fetch(RSVP_ENDPOINT, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {"Content-Type": "text/plain;charset=utf-8"},
+          body: JSON.stringify(payload)
+        });
+        statusBox.textContent = "Thank you! Your RSVP has been sent. If you need to change your response, please contact Harvey or Hazel.";
+        form.reset();
+        guestCount.disabled = false;
+      } catch (error) {
+        statusBox.className = "status error";
+        statusBox.textContent = "We couldn't send your response. Please check your internet connection and try again.";
+      }
+    });
+  </script>
+</body>
+</html>
